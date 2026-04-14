@@ -21,7 +21,7 @@ Starting a modern, visually stunning Next.js project usually takes hours of repe
 To spin up a new Requiem project instantly, run the following command in your terminal:
 
 ```bash
-npx create-requiem-next-app
+npm i create-requiem-next-app
 ```
 <br />
 
