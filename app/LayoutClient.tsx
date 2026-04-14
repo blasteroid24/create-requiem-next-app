@@ -1,11 +1,10 @@
 "use client";
 import { ReactLenis } from 'lenis/react';
-// import Header from "@/components/Header";
-// import Header2 from "@/components/Header2";
-// import GlitchBoxProvider from "@/transitions/GlitchBoxProvider";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import GlitchBoxProvider from "@/transitions/GlitchBoxProvider";
 
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
-    // const pathname = usePathname();
 
     return (
         <ReactLenis root options={{
@@ -16,9 +15,13 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
             touchMultiplier: 2,
             infinite: false,
         }}>
-            {/* <GlitchBoxProvider> */}
+
+            <GlitchBoxProvider>
+                <Header />
                 <main className="flex-1">{children}</main>
-            {/* </GlitchBoxProvider> */}
+                <Footer />
+            </GlitchBoxProvider>
+
         </ReactLenis>
     );
 }

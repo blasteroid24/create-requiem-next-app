@@ -1,33 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Montserrat, Poppins, Lato, Geist, Source_Code_Pro } from "next/font/google";
+import { cn } from "@/lib/utils";
+import LayoutClient from "./LayoutClient";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const montserrat = Montserrat({ variable: "--font-montserrat", subsets: ["latin"] });
+const poppins = Poppins({ variable: "--font-poppins", subsets: ["latin"], weight: ["400", "700"] });
+const lato = Lato({ variable: "--font-lato", subsets: ["latin"], weight: ["400", "700"] });
+const sourcecode = Source_Code_Pro({ variable: "--font-sourcecode", subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Requiem",
-  description: "create-requiem-app",
+  description: "create-requiem-next-app",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", geistMono.variable, montserrat.variable, poppins.variable, lato.variable, "font-sans", geist.variable, sourcecode.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body
+        className="relative min-h-full w-full flex flex-col font-montserrat bg-gradient-to-r from-zinc-950 via-[#350808] to-zinc-950 text-white">
+        <LayoutClient>
+          {children}
+        </LayoutClient>
+      </body>
     </html>
   );
 }
