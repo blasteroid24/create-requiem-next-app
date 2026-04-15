@@ -1,6 +1,6 @@
 <div align="center">
   <h1>create-requiem-next-app</h1>
-  <p><b>The ultimate Next.js scaffolding tool featuring GSAP transitions, Lenis scrolling, and pre-built immersive layouts.</b></p>
+  <p><b>The ultimate Next.js scaffolding tool featuring GSAP transitions, Lenis scrolling, and pre-built immersive layouts and pre installed libraries to kick start you project .</b></p>
   
   [![npm version](https://img.shields.io/npm/v/create-requiem-next-app.svg?style=flat-square)](https://www.npmjs.com/package/create-requiem-next-app)
   [![npm downloads](https://img.shields.io/npm/dt/create-requiem-next-app.svg?style=flat-square)](https://www.npmjs.com/package/create-requiem-next-app)
@@ -19,9 +19,14 @@ Starting a modern, visually stunning Next.js project usually takes hours of repe
 ## Quick Start
 
 To spin up a new Requiem project instantly, run the following command in your terminal:
-
+To create a new project in the current directory:
 ```bash
-npm i create-requiem-next-app
+npx create-requiem-next-app
+```
+
+To create a new project named my-app:
+```bash
+npx create-requiem-next-app my-app
 ```
 <br />
 
@@ -60,6 +65,16 @@ Sick of starting with a blank white page? Requiem automatically seeds your appli
 ### Instant Library Scaffolding
 The days of manual configuration are essentially over. Depending on your wizard choices, your project will natively scaffold the boilerplate store variables, hooks, or Provider files, fetch backend dependencies, and seamlessly weave them into your App Router DOM. 
 
+### Pre Installed Libraries 
+`
+ShadCN
+React Icons
+Lenis
+Axios
+Tailwind
+GSAP
+`
+
 <br />
 
 ## Gallery
@@ -84,6 +99,3 @@ Take a look at the curated UI components provided instantly upon project creatio
 </div>
 
 <br />
-
-## Keywords
-`nextjs`, `nextjs-15`, `react`, `app-router`, `gsap`, `page-transitions`, `lenis`, `smooth-scroll`, `redux`, `zustand`, `tanstack-query`, `boilerplate`, `scaffolding`, `cli`, `frontend-framework`
